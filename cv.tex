@@ -1,5 +1,4 @@
-% resume.tex
-% vim:set ft=tex spell:
+% Randy Westlund's Personal CV
 
 \documentclass[10pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.75in]{geometry}
@@ -10,42 +9,18 @@
 \usepackage{tgpagella}
 \usepackage{gensymb}
 \usepackage{enumitem}
-% no space above enumerate
+% No space above enumerate.
 \setlist{nolistsep}
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 \setlist[itemize]{itemsep=0.2em}
 
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}%
-	\item[]%
-}
-{\end{list}}
-
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{-0.5#1}}%
-	\item[]%
-}
-{\end{list}}
-
-% format two pieces of text, one left aligned and one right aligned
+% Format two pieces of text; one left aligned and one right aligned.
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
 	#1 & #2 \\
 \end{tabular*}}
 
-% make "C++" look pretty when used in text by touching up the plus signs
-\newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
-
-%\parskip=0.1em
-%\usepackage[parfill]{parskip}
-% and the actual content starts here
 \begin{document}
 
 \begin{center}
@@ -381,7 +356,7 @@
 \vspace{-0.4em}
 \subsection*{Core Technical Skills}
 \begin{itemize*}
-    \item \textbf{Programming Languages:} C, \CPP, Java, C\#, Perl,
+    \item \textbf{Programming Languages:} C, C\texttt{++}, Java, C\#, Perl,
             Python, JavaScript
     \item \textbf{Domain-Specific:} VHDL, SQL, GNU Make, Shell, Regular
             Expressions, HTML/CSS, \LaTeX, Octave/MATLAB
@@ -531,3 +506,4 @@
         %\item[Open Source Contributions:]
 \end{itemize*}
 \end{document}
+% vim:set spell:
