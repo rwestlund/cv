@@ -1,0 +1,345 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{gensymb}
+\usepackage{enumitem}
+% no space above enumerate
+\setlist{nolistsep}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\setlist[itemize]{itemsep=0.2em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+%\parskip=0.1em
+%\usepackage[parfill]{parskip}
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{Randy J. Westlund, E.I.}}
+
+28 Princeton St Apt 2 \ \ \textbullet
+\ \ Medford, MA 02155
+\\
+(704) 526-5337 \ \ \textbullet
+\ \ rwestlun@gmail.com \ \ \textbullet
+\ \ www.textplain.net
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize*}
+	\parskip=0.1em
+
+	\item 
+	\headerrow
+		{\textbf{The University of North Carolina at Charlotte}}
+		{\textbf{Charlotte, NC}}
+	\\
+	\headerrow
+		{\emph{B.S., Computer Engineering}}
+		{\emph{2007 -- 2011}}
+	\headerrow
+		{\emph{Minor: Mathematics, Classical Studies}}
+		{\emph{2011}}
+        \emph{Major GPA: 3.70, Overall GPA: 3.56} \\
+        \textbf{Senior Design Project}
+        \begin{itemize*}
+            \item Won second place of 50 teams, leading an interdisciplinary team of 5 engineering seniors on a two-semester project to design and build an autonomous robot with obstacle avoidance and a user-controlled videoconference mode. The robot ran Gentoo Linux on a Pandaboard (cross compiled for ARM), with Robot Operating System (ROS). Ultrasonic, IR range, and bump sensors provided safety. A Kinect was used for computer vision with the Point Cloud Library.
+        \end{itemize*}
+    \textbf{Course Projects}
+    \begin{itemize*}
+        \item Worked in teams to design embedded computer systems in C. Individually wrote a custom version of malloc()/free() and implemented it on a Renesas microcontroller.
+        \item Implemented a parallelized, pipelined version of the Needleman-Wunsch algorithm for global sequence alignment of A-C-G-T protein sequences in VHDL\@.  Working solo, I outperformed teams of grad students.  The professor asked to use my presentation for himself.
+        \item Implemented 3D graphics rendering algorithms of Lambertian and specular surfaces with the Phong Reflection Model in MATLAB and rendered simple shapes in Java 3D.
+        \item Worked in teams to design, prepare, and present a 70-page formal business proposal for an original idea in a hypothetical start-up company.
+        \item Individually designed, simulated, and constructed a four-stage 60 dB amplifier with BJTs.
+        \item Worked in teams to design and process RFID antennas on 4” silicon wafers in a clean room.
+    \end{itemize*}
+\end{itemize*}
+
+\hrule
+\vspace{-0.4em}
+
+\subsection*{Professional Accomplishments}
+\headerrow
+    {\textbf{Engineer Intern}, North Carolina, FE Certificate Number A-26823}
+    {\emph{December 2011}}
+\headerrow
+    {\textbf{Second Place}, UNC Charlotte Engineering Senior Design Competition}
+    {\emph{December 2011}}
+\headerrow
+    {\textbf{FCC Amateur Radio License}, General Class KK4DOP}
+    {\emph{August 2011}}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+    % SLOOP
+    \item
+    \headerrow
+        {\textbf{EAPS, Massachusetts Institute of Technology}}
+        {\textbf{Cambridge, MA}}
+    \headerrow
+        {\emph{System Architect, Researcher}}
+        {\emph{April 2014 -- Present}}
+    \begin{itemize}
+        \item Took the primary role in developing SLOOP, a pattern retrieval engine for animal biometrics that uses cloud computing, machine learning, and crowd sourcing to greatly improve the study of animal movement and behavior.  SLOOP takes any number of images (tens to tens of thousands) of a particular species of animal and applies pattern recognition to identify the individual in the image.  User feedback improves the system's matching process.  This type of human-in-the-loop processing provides scientists with a non-invasive way to track individuals and model animal populations over time.
+        \item Independently redesigned the system from the ground up, implementing a new RESTful system from scratch using Node.js on the back end and Angular.js and Bootstrap on the front end to manage the new high-performance client-side application.  The system performs well on both desktop and mobile platforms.  Moved all data from the filesystem to the ACID-compliant PostgreSQL relational database.
+        \item Expanded the system to handle new species, implemented a web interface management console, and packaged it in a deployable virtual machine.
+        \item Made trips to Mexico to test unmanned aerial systems (UAS) at Popocatépetl, an active volcano. The goal was to fly sensors through the volcano's plume in order to collect important environmental data.
+        \item Cross compiled and deployed a custom NanoBSD image to ALIX x86 embedded boards to provide communications over 900 MHz between the UAS and the ground.
+        \item Implemented a realtime H.264 video streaming solution and live telemetry feed from the UAS to the ground.
+    \end{itemize}
+
+    % CTA
+	\item
+	\headerrow
+		{\textbf{Charlotte Tent and Awning Co., Inc.}}
+		{\textbf{Charlotte, NC}}
+	\headerrow
+		{\emph{Database Administrator \& Efficiency Evaluator}}
+        {\emph{March 2013 - Present}}
+	\begin{itemize}
+		\item Led business meetings with management to study paper-driven company workflow and discuss areas where technology could improve efficiency and communication in the company.  Because every awning is custom made with unique specifications, there are unique workflow challenges to address.
+        \item Designed data schemas in MongoDB and developed an early prototype database server and counterpart C\#.NET desktop application to demonstrate the capabilities of a possible database engineered specifically to meet the unique needs of the company.  This system helped manage customers and jobs.
+        \item Led follow up meetings with management to discuss the impact of the prototype and what we had learned about the company's needs.  After determining that real time mobile access was necessary, redesigned the front end and implemented a MEAN stack and client-side application with Node.js and Angular.js.  Utilized MongoDB local and remote replication to ensure data integrity.  Led seminars for employees and management for each major version change and handled support emails.
+        \item With a mobile-first development model, expanded the system over time to include the means to manage customers, job status and versioning, authentication and authorization with OAuth, salesman appointments, file uploads, and data reporting and analysis of information.  With the power of secure, access-controlled, and always up-to-date company records at their fingertips wherever they go, the company's productivity has increased beyond initial projections.
+
+	\end{itemize}
+
+	\headerrow
+		{\emph{Bookkeeper/Assistant}}
+		{\emph{June 2005 -- September 2009}}
+	\begin{itemize}
+		\item Responsible for overseeing cash flow of company including invoicing of customers and accounts payable of corporation with \$2.5 million in annual revenues.
+		\item Directly interacted with company owner and salespersons to ensure efficient workflow of sales orders from initial proposal through project completion.
+		\item Assisted in design, build, and setup of trade shows convention displays for groups of 20,000 -- 30,000 attendees.
+	\end{itemize}
+
+    \item
+    \headerrow
+		{\textbf{E5 Aeronautics}}
+		{\textbf{Cambridge, MA}}
+	\headerrow
+		{\emph{Systems Engineer}}
+		{\emph{July 2013 -- May 2014}}
+    \begin{itemize}
+        \item Designed embedded systems and communication protocols for small unmanned aircraft for civilian use.  Primary use cases include mapping, wildlife monitoring, and volcano plume sampling.  Explored issues such as mesh networking, low-latency remote control, and redundant sensor systems.  Used MAVLink and custom communication protocols.
+        \item Modified firmware for Wi-Fi SD cards and Canon cameras with CHDK, wrote custom device drivers for 900 MHz radios, and deployed to an embedded Linux development board.  Utilized memory-mapped files to meet near realtime message passing requirements.
+    \end{itemize}
+
+
+    % urban scholars
+    \item
+    \headerrow
+		{\textbf{Urban Scholars, University of Massachusetts Boston}}
+		{\textbf{Boston, MA}}
+	\headerrow
+		{\emph{Robotics Instructor}}
+		{\emph{June 2013 -- December 2013}}
+	\begin{itemize}
+        \item Participated as an instructor in the Urban Scholars program, which assists academically advanced but economically disadvantaged or first-generation college bound high school and middle school students.  The program provides afternoon classes, summer school, and tutoring, to assist students with making it to college.  Students in good standing are paid a stipend to enable them to spend time learning rather than working.
+        \item Designed and proposed my own courses on Beginning Robotics, Advanced Robotics, and Intro Programming, working them in with the new Common Core standards for a balanced curriculum.  Met weekly with the academic coordinator to discuss lesson plans and improve my teaching skills.
+        \item Taught classes of 15 - 25 students from ages 11 - 16.  Topics included Lego Mindstorms, custom tank robots with Arduinos and a Pololu gearbox, Java programming, how computers think, security and encryption, internet safely, robotics in the news, ethical considerations, important men and women in robotics and computing, and reflective writing.
+	\end{itemize}
+    % SPI
+	\item
+	\headerrow
+		{\textbf{SPI Team, LLC}}
+		{\textbf{Highland, MD}}
+	\headerrow
+		{\emph{Start-up Company Founder \& Lead Engineer}}
+		{\emph{February 2012 -- June 2013}}
+	\begin{itemize}
+		\item Started a business with my retired mentor from NASA\@.  I helped organize the company, including financial records and professional contacts, and helped build a small team of skilled engineers.  I worked to keep the team on-task and divided work appropriately.
+		\item With a team, designed and implemented a prototype electronics box to control robotic arms with inverse kinematic endpoint control and PID feedback loops.  These arms used a variety of devices, including servos, DC motors, potentiometers, magnetic and absolute encoders, and linear actuators.  The control algorithm was developed on a Maple development board after being prototyped in Python.  These control boxes may see military service soon.  I designed the circuit, wrote the low-level I/O functions to enable the microcontroller to communicate with the sensors and motors, and helped solve the inverse kinematic equations.
+		\item Made business plans with a patent holder for a germicidal UVC light device, and designed a prototype with a team. The device is an embedded light fixture containing a UVC bulb and moving shutter that can alternately sanitize the air or irradiate the surfaces in the room if it detects that no one is present.  The prototype used an assortment of sensors and 802.15.4 wireless mesh communication.  Personally wrote the embedded firmware and designed a communication protocol.  Deliverables included the prototype device, prototype control software, and engineering documentation.
+            % changed to make Ann happy
+		%\item Made business plans with Elevated Health Systems LLC, a patent holder for a germicidal UVC light device, and designed a prototype with a team. The device is an embedded light fixture containing a UVC bulb and moving shutter that can alternately sanitize the air or irradiate the surfaces in the room if it detects that no one is present.  The prototype used an assortment of sensors and 802.15.4 wireless mesh communication.  Personally wrote the embedded firmware and designed a communication protocol.  Deliverables included the prototype device, prototype control software, and engineering documentation.  See US patents 7692172 and 8097861.
+		\item Under a new contract, continued work on a software-defined radio project in McMurdo, Antarctica that I started for NASA with NOAA's POES satellites during the summer of 2011 (see Goddard Space Flight Center, below).  I returned to Antarctica in December 2012 to verify that my system was functional, record data, and retrograde the 28-year old ground station.  All equipment was tested and packaged for return to NASA Goddard.  The ground station was prepared for a new team of NASA engineers.
+	\end{itemize}
+
+	\item
+	\headerrow
+		{\textbf{NASA Goddard Space Flight Center}}
+		{\textbf{Greenbelt, MD}}
+	\\
+	\headerrow
+		{\emph{Apprentice/Lead Intern, Robotics Engineering Boot Camp}}
+		{\emph{June 2011 -- Aug 2011}}
+	\begin{itemize}
+		\item Arrived early and familiarized myself with current projects.  When other interns arrived, gave presentations to them and assisted in dividing work based on individual strengths.  Coordinated group work and managed all contact information.
+		\item Started a project using a Universal Software Radio Peripheral (USRP) with GNU Radio to design and implement a software-defined radio for the NASA Antarctic Interactive Launch Support (NAILS) system at the NASA Satellite Ground Station in McMurdo, Antarctica.  The system replaces outdated analog signal processing equipment to receive, demodulate, and decode L-band and S-band satellite communications from NOAA's Polar Operational Environmental Satellites (POES).  I personally installed a \$6,000 Linux server and my software-defined radio in the NAILS server racks during a trip to McMurdo in December 2011 with a small team of NASA engineers.  I returned in December 2012 to continue work (see SPI Team, above).
+		\item Coordinated the LIDAR-Assisted Robotic Group Exploration (LARGE) project, using multiple robots with 3D SLAM to generate cohesive mapping data.  The robots ran ROS and took input from a 360\degree\ LIDAR, a Kinect, quadrature encoders, and laser rangefinders.  Main software challenges include image stitching, navigation, obstacle avoidance, and directing multiple specialized workerbots from the mothership.  Robotic arms were being developed in parallel.  The goal of the project was to demonstrate the viability of implementation on Mars and other planets.
+	\end{itemize}
+
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+\begin{itemize*}
+    \item \textbf{Programming Languages:} C, \CPP, Java, C\#, Perl, Python, JavaScript
+    \item \textbf{Domain-Specific:} VHDL, SQL, GNU Make, Shell, Regular Expressions, HTML/CSS, \LaTeX, Octave/MATLAB
+    \item \textbf{Operating Systems and Programs}
+        \begin{itemize*}
+            \item Linux, GCC/GDB, Custom kernels and drivers, memory-mapped files
+            \item FreeBSD, Jails, ZFS
+            \item Windows, Visual Studio, QuickBooks
+            \item Xilinx ISE
+        \end{itemize*}
+    \item \textbf{System Administration}
+        \begin{itemize*}
+            \item Familiarity with server racks and enterprise hardware
+            \item Software RAID, LUKS encryption, ZRAID
+            \item Experience managing multiple small home servers with varying operating systems
+            \item Apache, Nginx, PostgreSQL, MongoDB
+            \item Proper password management
+        \end{itemize*}
+    \item \textbf{Frameworks}
+        \begin{itemize*}
+            \item \textbf{Web:} Django, Node.js, Express, Angular.js, Bootstrap, jQuery, OAuth
+            \item \textbf{Robotics:} Robot Operating System (ROS), MAVLink
+            \item \textbf{Version Control:} SVN, Git, CVS
+            \item \textbf{Libraries:} .NET, Qt, STL, Ncurses
+        \end{itemize*}
+    \item \textbf{Embedded Systems \& Electronics}
+        \begin{itemize*}
+            \item Arduino, AVR, BeagleBone, Misc ARM and x86 dev boards
+            \item Efficient use of on-chip peripherals
+            \item UART, SPI, I$^2$C/TWI protocols
+            \item Command line cross compiler toolchains built from source
+            \item Circuit design and home etching with Eagle and KiCad EDA software
+            \item Soldering and prototyping, use of electronics workbench
+            \item Sourcing parts from suppliers like Digi-Key and Mouser
+        \end{itemize*}
+    \item \textbf{RF Communications}
+        \begin{itemize*}
+            \item Digital Signal Processing in GNU Radio and MATLAB
+            \item Universal Software Radio Peripheral (USRP)
+            \item Amateur Radio
+            \item Processing from feedpoint to baseband and demodulation
+            \item Mesh networking
+        \end{itemize*}
+    \item \textbf{Peripheral Hardware}
+        \begin{itemize*}
+            \item Kinect, LIDAR systems
+            \item Ultrasonic and IR rangefinders
+            \item Servos, DC motors, linear actuators, encoders
+            \item 802.15.4 XBee radios
+            \item Canon cameras and CHDK
+        \end{itemize*}
+    \item \textbf{Foreign Languages}
+        \begin{itemize*}
+            \item Latin: Two years of study
+            \item Ancient (Attic) Greek: One year of study
+            \item Spanish: Two years of study
+        \end{itemize*}
+    \item \textbf{Miscellaneous}
+        \begin{itemize*}
+            \item Leadership and project management
+            \item Formal and written business communication
+            \item Detailed documentation practices
+            \item Antarctic survival and igloo design
+        \end{itemize*}
+\end{itemize*}
+
+
+% projects
+\hrule
+\vspace{-0.4em}
+\subsection*{Projects}
+    \begin{itemize}
+        \item \headerrow{\textbf{Textplain}}{\emph{April 2015}}
+        \begin{itemize}
+            \item Built a personal website without a CMS using Django, PostgreSQL, and Nginx.  The site avoids the use of client-side javascript yet still follows a mobile-first design philosophy.
+        \end{itemize}
+
+        \item \headerrow{\textbf{Recipes}}{\emph{December 2014}}
+        \begin{itemize}
+            \item Built a MEAN stack database and client-side application for managing recipes with MongoDB, Node.js, and Angular.js.  The server allows family and friends to add, edit, and comment on recipes in one central location, rather than maintaining a long list of bookmarks or physical binder.  It's designed for mobile use and easy to use from the kitchen.
+        \end{itemize}
+
+        \item \headerrow{\textbf{Glorb}}{\emph{Spring 2013}}
+        \begin{itemize}
+            \item With my wife, designed and prototyped a science education project for MIT\@.  Glorbs are a whiffle ball containing a circuit with an AVR ATmega, an accelerometer, a lithium-ion battery pack, and a bunch of RGB LEDs.  The LEDs change color in response to acceleration -- red for freefall, blue for high acceleration.  The goal is to explore physics and principles of acceleration by playing catch with them.  Glorbs give learners concrete visual feedback about the acceleration forces on a ball during the course of normal play.  We presented this at the MIT Media Lab's Other Festival in Spring 2013.
+        \end{itemize}
+
+        \item \headerrow{\textbf{Motion Lights}}{\emph{2013}}
+        \begin{itemize}
+            \item With spare PIR motion sensors and AVR chips, prototyped a power-efficient motion-triggered relay with AA batteries and tunable delay before shutoff.  This is small enough to fit in a junction box behind a lightswitch.  The lightswitch being on the wrong side of the kitchen is no longer an issue.
+        \end{itemize}
+    \end{itemize}
+
+% interests
+\hrule
+\vspace{-0.4em}
+\subsection*{Interests}
+\begin{itemize*}
+    \item Spare Time
+        \begin{itemize*}
+            \item Hiking, camping, and outdoorsmanship, visiting national parks
+            \item Nature and candid photography with Canon Rebel
+            \item Recycling broken computers for my servers
+            \item Experimenting with new operating systems and frameworks on the weekend
+            \item Following tech news and podcasts, particularly security news
+            \item Participating in Usenet and anonymous darknet projects
+            \item Taking things apart to see how they work
+        \end{itemize*}
+    \item My Workspace
+        \begin{itemize*}
+            \item Everything running BSD, tiling window manager, Vim, command line tools, Screen/Tmux, standing desk, multiple monitors, Kinesis Advantage keyboard.
+            %\item BSD servers hosting all essential services, including code repositories, databases, and backups
+            %\item A dedicated development server for testing
+            %\item A Linux or BSD workstation, running a tiling window manager
+            %\item Vim for editing, Git for version control, Mutt for mail, chat over IRC
+            %\item Standing desk with multiple monitors and Kinesis Advantage keyboard
+            %\item Screen or Tmux whenever working over SSH
+            %\item Documentation and reports rendered in \LaTeX\ and kept under version control
+            %\item Command line tools wherever possible
+        \end{itemize*}
+%        \item[Open Source Contributions:]
+
+\end{itemize*}
+
+\end{document}
