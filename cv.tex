@@ -9,6 +9,7 @@
 \usepackage{tgpagella}
 \usepackage{gensymb}
 \usepackage{enumitem}
+\usepackage{tabularx}
 % No space above enumerate.
 \setlist{nolistsep}
 \pagestyle{empty}
@@ -16,10 +17,11 @@
 \setlist[itemize]{itemsep=0.2em}
 
 % Format two pieces of text; one left aligned and one right aligned.
-\newcommand{\headerrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	#1 & #2 \\
-\end{tabular*}}
+\newcommand{\headerrow}[2]{%
+    \begin{tabularx}{\linewidth}{Xr}
+	    #1 & #2 \\
+    \end{tabularx}
+}
 
 \begin{document}
 \begin{center}
