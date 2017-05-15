@@ -295,47 +295,77 @@
 \vspace{2pt}
 \hrule
 \vspace{-0.4em}
-\subsection*{Projects}
-    \begin{itemize}
-        \item \headerrow{\textbf{Textplain}}{\textit{April 2015}}
-        \begin{itemize}
-            \item Built a personal website without a CMS using Django,
-                PostgreSQL, and Nginx.  The site avoids the use of client-side
-                javascript yet still follows a mobile-first design philosophy.
-        \end{itemize}
+\subsection*{Top Open Source Contributions}
+    \headerrow{\textbf{FreeBSD}}{\textbf{Contributor}}
+    \headerrow{\url{https://www.FreeBSD.org}}{\textit{BSD License}}
+    \begin{itemize}[label=--]
+        \item Contributed several patches to the source, ports, and
+            documentation trees.
 
-        \item \headerrow{\textbf{Recipes}}{\textit{Dec 2014}}
-        \begin{itemize}
-            \item Built a MEAN stack database and client-side application for
-                managing recipes with MongoDB, Node.js, and Angular.js.  The
-                server allows family and friends to add, edit, and comment on
-                recipes in one central location, rather than maintaining a long
-                list of bookmarks or physical binder.  It's designed for mobile
-                use and easy to use from the kitchen.
-        \end{itemize}
+        \item Completed the majority of the work to port a new version of
+            the `top' command.
 
-        \item \headerrow{\textbf{Glorb}}{\textit{Spring 2013}}
-        \begin{itemize}
-            \item With my wife, designed and prototyped a science education
-                project for MIT\@.  Glorbs are a whiffle ball containing a
-                circuit with an AVR ATmega, an accelerometer, a lithium-ion
-                battery pack, and a bunch of RGB LEDs.  The LEDs change color
-                in response to acceleration---red for freefall, blue for high
-                acceleration.  The goal is to explore physics and principles of
-                acceleration by playing catch with them.  Glorbs give learners
-                concrete visual feedback about the acceleration forces on a
-                ball during the course of normal play.  We presented this at
-                the MIT Media Lab's Other Festival in Spring 2013.
-        \end{itemize}
+        \item Created ports for several applications, and maintainer of
+            several more.
+    \end{itemize}
 
-        \item \headerrow{\textbf{Motion Lights}}{\textit{2013}}
-        \begin{itemize}
-            \item With spare PIR motion sensors and AVR chips, prototyped a
-                power-efficient motion-triggered relay with AA batteries and
-                tunable delay before shutoff.  This is small enough to fit in a
-                junction box behind a lightswitch.  The lightswitch being on
-                the wrong side of the kitchen is no longer an issue.
-        \end{itemize}
+    \headerrow{\textbf{avr-osccal}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/avr-osccal}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Implemented Atmel's OSCCAL algorithm from App Note 053 in C.
+            This enables users to easily calibrate the internal clocks on
+            AVR chips to in-circuit conditions with only the ISP interface.
+    \end{itemize}
+
+    \headerrow{\textbf{embedded-digimesh}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/embedded-digimesh}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Created a minimal C library for the core portion of the XBee
+            DigiMesh protocol.  It's designed for use in embedded devices.
+    \end{itemize}
+
+    \headerrow{\textbf{node-digimesh}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/node-digimesh}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Created a Node.js JavaScript library for the XBee DigiMesh
+            protocol.  It's designed for IoT applications.
+    \end{itemize}
+
+    \headerrow{\textbf{paladin}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/paladin}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Created a process supervisor in Go.  Launches and monitors
+            services from a config file, with dependencies and automatic
+            restarts.
+    \end{itemize}
+
+    \headerrow{\textbf{recipes}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/recipes}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Created a mobile-friendly client-side web application for
+            managing recipes with family and friends.  Uses the Polymer web
+            framework with Go and PostgreSQL behind a RESTful API\@.  First
+            version used a MEAN stack.
+    \end{itemize}
+
+    \headerrow{\textbf{responsive-dialog}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/responsive-dialog}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Created a modal dialog web component following Google's Material
+            Design guidelines.  Dynamically adjusts between a desktop dialog
+            pop-up and a mobile full screen menu.
+    \end{itemize}
+
+    \headerrow{\textbf{gotex}}{\textbf{Author}}
+    \headerrow{\url{https://github.com/rwestlund/gotex}}{\textit{BSD-2-Clause}}
+    \begin{itemize}[label=--]
+        \item Implemented a Go library for rendering arbitrary LaTeX documents.
+    \end{itemize}
+
+    \headerrow{\textbf{freesweep}}{\textbf{Maintainer}}
+    \headerrow{\url{https://github.com/rwestlund/gotex}}{\textit{GPL-2.0}}
+    \begin{itemize}[label=--]
+        \item Fixed bugs, cleaned up code, and maintained for the community.
     \end{itemize}
 
 \hrule
