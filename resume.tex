@@ -1,0 +1,144 @@
+% Randy Westlund's Personal Resume
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% For \textbullet.
+\usepackage{textcomp}
+% A different font.
+\usepackage{tgpagella}
+% Advanced options for lists.
+\usepackage{enumitem}
+% For left and right aligning text.
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{url}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+\setlength{\parindent}{0pt}
+% Adjust list spacing.
+\setlist{itemsep=2pt,topsep=0pt,parsep=0pt}
+
+% Format two pieces of text; one left aligned and one right aligned.
+\newcommand{\headerrow}[2]{%
+    \begin{tabularx}{\linewidth}{Xr}
+	    #1 & #2 \\
+    \end{tabularx}
+}
+
+\begin{document}
+\begin{center}
+{\LARGE \textbf{Randy Westlund}}
+
+605 E 21st Ave \ \ \textbullet \ \ Post Falls, ID 83854 \\
+(704) 526 5337 \ \ \textbullet \ \ rwestlun@gmail.com \\
+\end{center}
+
+\vspace{-4pt}
+\hrule
+\vspace{-0.8em}
+\subsection*{Experience}
+  \headerrow{\textbf{Kootenai Strong}}{\textbf{Post Falls, ID}}
+	\headerrow{\textit{Co-Founder and President}}{\textit{August 2022--Present}}
+    \begin{itemize}[label=--]
+        \item Jointly founded a nonprofit focused on Kootenai County which is a combination of think tank and community event organizer. Many details are still TBD.
+	\end{itemize}
+
+  \headerrow{\textbf{Westlund Investments \& Property Management}}{\textbf{Post Falls, ID}}
+	\headerrow{\textit{Minority Owner and Manager}}{\textit{September 2021--Present}}
+    \begin{itemize}[label=--]
+        \item Directed investment in Kootenai County single-family homes. Personally managed four properties.
+	\end{itemize}
+
+	\headerrow{\textbf{Diligens Technology}}{\textbf{Post Falls, ID}}
+	\headerrow{\textit{Co-Founder and CEO}}{\textit{March 2021--Present}}
+    \begin{itemize}[label=--]
+        \item Created a custom software development business with a focus on web-based technologies.
+          Took the technical lead role, designing system architecture and keeping projects on schedule.
+	\end{itemize}
+
+	\headerrow{\textbf{Awning Tracker}}{\textbf{Post Falls, ID}}
+	\headerrow{\textit{Founder and CEO}}{\textit{July 2016--Present}}
+    \begin{itemize}[label=--]
+        \item Created a business providing project management
+            software to small companies in the awning industry.
+
+        \item Gave presentations and managed booths at international trade shows. Trained multiple interns.
+	\end{itemize}
+
+    \headerrow{\textbf{Experimeta, LLC}}{\textbf{Medford, MA}}
+    \headerrow{\textit{Co-Founder and CEO}}{\textit{July 2015--August 2018}}
+    \begin{itemize}[label=--]
+        \item Designed and implemented a second iteration of the firmware and
+            software for the ultraviolet cleaning devices described under SPI
+            Team, below. Traveled to Kansas to demo and install the improved units.
+    \end{itemize}
+
+    \headerrow{\textbf{Earth, Atmospheric, and Planetary Sciences Department, MIT}}
+        {\textbf{Cambridge, MA}}
+    \headerrow{\textit{System Architect, Researcher}}{\textit{April 2014--May 2017}}
+    \begin{itemize}[label=--]
+        \item Took over development of SLOOP, an animal biometrics engine which uses image recognition to help
+          biologists identify individual members of a species from photographs in order to model population over time.
+
+        \item Traveled solo to New Zealand to upgrade and relocate the Department of Conservation's existing software.
+    \end{itemize}
+
+    \headerrow{\textit{Systems Engineer via E5 Aeronautics}}
+        {\textit{July 2013--November 2017}}
+    \begin{itemize}[label=--]
+        \item Designed embedded systems and communication protocols for small unmanned aircraft for civilian use.
+
+        \item Tested unmanned aerial systems (UAS/UAV) at Popocatépetl, an active
+            volcano in Mexico. Flew aircraft through the volcano's plume to collect environmental data.
+    \end{itemize}
+
+    \headerrow{\textbf{Urban Scholars, University of Massachusetts Boston}}
+		{\textbf{Boston, MA}}
+	\headerrow{\textit{Robotics Instructor}}{\textit{June 2013--Dec 2013}}
+    \begin{itemize}[label=--]
+        \item Designed and taught courses on robotics and programming for students aged 11--16.
+	\end{itemize}
+
+	\headerrow{\textbf{SPI Team, LLC}}{\textbf{Highland, MD}}
+	\headerrow{\textit{Co-Founder and Lead Engineer}}
+		{\textit{Feb 2012--June 2013}}
+    \begin{itemize}[label=--]
+        \item Led a team that designed and implemented embedded electronics and algorithms to control robotic arms.
+
+        \item Collaborated with a patent holder for an autonomous
+          internet-connected germicidal ultraviolet light cleaning device. Implemented a functional prototype from
+          patent filings, including circuit and firmware design.
+	\end{itemize}
+
+	\headerrow{\textbf{NASA Goddard Space Flight Center}}{\textbf{Greenbelt, MD}}
+	\headerrow{\textit{Apprentice/Lead Intern, Robotics Engineering Boot Camp}}
+		{\textit{June 2011--Aug 2011}}
+    \begin{itemize}[label=--]
+        \item Designed and implemented a software-defined radio (SDR) to
+          receive and decode satellite communications from NOAA's weather satellites.
+
+        \item Traveled to McMurdo, Antarctica and replaced old analog
+            equipment with my SDR in December 2011. Returned in December 2012 for follow-up. Learned antarctic
+            survival and igloo design.
+	\end{itemize}
+
+	\headerrow{\textbf{Charlotte Tent and Awning Co., Inc.}}{\textbf{Charlotte, NC}}
+	\headerrow{\textit{Bookkeeper/Assistant}}{\textit{June 2005--Sept 2009}}
+    \begin{itemize}[label=--]
+        \item Managed accounts receivable and accounts payable for company with \$2.5 million in revenue.
+	\end{itemize}
+
+\vspace{2pt}
+\hrule
+\vspace{-0.8em}
+\subsection*{Education}
+	\headerrow{\textbf{The University of North Carolina at Charlotte}}
+		{\textbf{Charlotte, NC}}
+	\headerrow{\textit{B.S., Computer Engineering}}{\textit{2011}}
+		\textit{Minor: Mathematics, Classical Studies} \\
+
+\end{document}
+% vim:set spell:
